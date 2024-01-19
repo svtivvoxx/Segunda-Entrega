@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon (click)="close()" name="close-circle-outline" slot="end"></ion-icon>
+    <ion-title>Confirmar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div class="center-container">
+    <ion-card style="color:black;" class="custom-card">
+      <h2>{{dataAsis.leccion}}</h2>
+      <h2>{{dataAsis.seccion}}</h2>
+      <h3>{{dataAsis.asignatura}}</h3>
+      <h4>{{dataAsis.sala}}</h4>
+      <h5>{{dataAsis.docente}}</h5>
+      <h5>{{dataAsis.fecha}}</h5>
+      <h6>{{dataAsis.hora}}</h6>
+    </ion-card>
+    <ion-button (click)="regAsis()">Registrar Asistencia</ion-button>
+    <ion-button (click)="close()" >Cancelar</ion-button>
+  </div>
+</ion-content>

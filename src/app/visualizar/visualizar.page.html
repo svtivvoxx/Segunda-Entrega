@@ -1,0 +1,45 @@
+<ion-content class="ion-padding" style="background: linear-gradient(to bottom, #000000, #3333ff);">
+  <div class="main-container">
+    <ion-button fill="clear" class="start-button" (click)="goToMenu()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Visualizar</ion-title>
+    <div class="rounded-container">
+      <ng-container *ngIf="asistenciaAlumno">
+        <ion-button expand="full" *ngFor="let asist of asistenciaAlumno" class="custom-button" routerLink="/asignatura/{{asist.primaryKey}}">
+          <ion-label>
+            <h3>{{asist.leccion}}</h3>
+            <p>Fecha: {{asist.fecha}}</p>
+            <p>Horario: {{asist.hora}}</p>
+          </ion-label>
+        </ion-button>
+      </ng-container>
+      <ng-container *ngIf="asistenciaAlumno.length===0">
+        <p>No tiene asistencia registrada.</p>
+      </ng-container>
+      <!-- <ion-button expand="full" class="custom-button" routerLink="/asignatura">
+        <ion-label>
+          <h3>Programación Web</h3>
+          <p>Miércoles y Viernes</p>
+          <p>Horario: 11:00 AM - 12:50 AM</p>
+        </ion-label>
+      </ion-button>
+
+      <ion-button expand="full" class="custom-button">
+        <ion-label>
+          <h3>Calidad de Software</h3>
+          <p>Viernes</p>
+          <p>Horario: 8:30 AM - 10:50 AM</p>
+        </ion-label>
+      </ion-button>
+
+      <ion-button expand="full" class="custom-button">
+        <ion-label>
+          <h3>Arquitectura</h3>
+          <p>Miércoles y Jueves</p>
+          <p>Horario: 8:30 AM - 10:50 AM</p>
+        </ion-label>
+      </ion-button> -->
+    </div>
+  </div>
+</ion-content>

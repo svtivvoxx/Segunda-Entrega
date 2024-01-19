@@ -1,0 +1,78 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ion-content {
+  animation: slideIn 1s ease; 
+  
+}
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .rounded-container {
+    background-color: #3302f7fc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 600px #3302f7fc;
+  }
+  
+  ion-button {
+    --background: #007bff;
+    --color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  ion-button:hover {
+    --background: #0056b3;
+  }
+  
+  .remember-forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .remember-forget a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .remember-forget a:hover {
+    color: #0056b3;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .animate-text {
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .animate-text:hover {
+    color: red;
+  }
+  

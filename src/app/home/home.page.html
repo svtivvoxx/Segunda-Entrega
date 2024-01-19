@@ -1,0 +1,27 @@
+<ion-content class="ion-padding" scrollY="false">
+  <div class="main-container">
+    <div class="rounded-container">
+      <form>
+        <h2>Iniciar Sesión</h2>
+        <div class="input-box">
+          <ion-icon name="mail-outline" class="icon"></ion-icon>
+          <ion-input type="email" placeholder="Correo Electrónico" [(ngModel)]="email" name="email" required></ion-input>
+        </div>
+        <div class="input-box">
+          <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required></ion-input>
+          <ion-icon name="lock-closed-outline" slot="end" class="icon"></ion-icon>
+        </div>
+        <div class="remember-forget">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Recordarme</ion-label>
+          <a href="#" slot="end" expand="full" routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
+        </div>
+        <ion-button expand="full" (click)="login()" expand="full" routerLink="" class="ion-activated">Iniciar Sesión</ion-button>
+        <div class="register-link">
+          <p style="text-align: center;">¿No tienes una cuenta? <a href="#" expand="full" routerLink="/register">Regístrate</a></p>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</ion-content>

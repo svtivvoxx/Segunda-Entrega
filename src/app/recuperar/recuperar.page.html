@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" scrollY="false">
+  <div class="main-container">
+    <div class="rounded-container">
+      <form (submit)="recoverPassword()">
+        <h2 class="animate-text">Recuperar Contraseña</h2>
+        <div class="input-box">
+          <ion-icon name="mail-outline" class="icon animate-text"></ion-icon>
+          <ion-input type="email" placeholder="Correo Electrónico" required></ion-input>
+        </div>
+        <ion-button expand="full" type="submit" class="animate-text">Recuperar</ion-button>
+        <div class="back-link remember-forget">
+          <ion-button fill="clear" (click)="goBack()" class="animate-text">Volver</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

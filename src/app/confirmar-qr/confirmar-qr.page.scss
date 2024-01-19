@@ -1,0 +1,31 @@
+@keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  ion-content {
+    animation: slideIn 1s ease;
+  }
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .custom-card {
+    --background: #3302f7fc;
+    width: 80%; /* Ajusta el ancho a tu preferencia */
+    margin: 10px;
+    box-shadow: 0 0 600px #3302f7fc;
+    text-align: center;
+  }
+  

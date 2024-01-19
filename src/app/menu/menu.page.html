@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content class="ion-padding" scrollY="false">
+  <ion-list>
+    <ion-item (click)="perfilesUsuarios()" style="margin-bottom: 10px;">
+      <ion-icon style="padding: 10px; font-size: 20px;" name="person-circle-outline"></ion-icon>
+      <h3>Perfil</h3>
+    </ion-item>
+    <ion-item (click)="ubicacion()">
+      <ion-icon style="padding: 10px; font-size: 20px;" name="location-outline"></ion-icon>
+      <h3>Ubicación</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button fill="clear" (click)="goToHome()" class="start-button">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" scrollY="false">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="main-container">
+            <div class="rounded-container">
+              <ion-button expand="full" (click)="scan()" routerLink="/camara">
+                Escanear
+              </ion-button>
+              <div class="button-space"></div>
+              <ion-button expand="full" (click)="view()" routerLink="/visualizar">
+                Asistencia
+              </ion-button>
+              <div class="button-space"></div>
+              <ion-button expand="full" (click)="ubicacion()" routerLink="/ubicacion">
+                Mapa
+              </ion-button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" [fullscreen]="true">
+  <div class="main-container">
+    <div class="rounded-container">
+      <div class="register-box">
+        <form (submit)="register()" #registerForm>
+          <h2>Registrarse</h2>
+
+          <div class="input-box">
+            <ion-icon name="mail-outline" class="icon"></ion-icon>
+            <ion-input type="email" placeholder="Correo Electrónico" [(ngModel)]="email" name="email"></ion-input>
+          </div>
+          <div class="input-box">
+            <ion-icon name="lock-closed-outline" class="icon"></ion-icon>
+            <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"></ion-input>
+          </div>
+
+          <ion-list>
+            <ion-item>
+              <ion-select (ionChange)="cargarComuna()" placeholder="Seleccione region" [(ngModel)]="regionSel" name="regionSel">
+                <ion-select-option *ngFor="let i of regiones" [value]="i.id">{{i.nombre}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+          <ion-list>
+            <ion-item>
+              <ion-select [disabled]="disabledComuna" placeholder="Seleccione comuna" [(ngModel)]="comunaSel" name="comunaSel">
+                <ion-select-option *ngFor="let i of comunas" [value]="i.id">{{i.nombre}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+          <ion-radio-group [(ngModel)]="tipoUsuario" name="tipoUsuario">
+            <ion-item class="user-type-item">
+              <ion-label>Docente</ion-label>
+              <ion-radio value="Docente"></ion-radio>
+            </ion-item>
+            <ion-item class="user-type-item">
+              <ion-label>Alumno</ion-label>
+              <ion-radio value="Alumno"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+
+          <ion-button expand="full" type="submit">Registrarse</ion-button>
+          <div class="login-link">
+            <p>¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

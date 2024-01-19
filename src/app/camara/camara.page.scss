@@ -1,0 +1,35 @@
+@keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  ion-content {
+    animation: slideIn 1s ease;
+  }
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .custom-button {
+    --background: #007bff;
+    --color: white;
+    width: 150px; /* Ajusta el ancho a tu preferencia */
+    height: 150px; /* Ajusta la altura a tu preferencia */
+    border-radius: 0; /* Hace que el botón sea cuadrado */
+    margin: 20px 0;
+    font-weight: bold;
+    border: solid black;
+    box-shadow: 0 0 500px #3302f7fc;
+  }
+  

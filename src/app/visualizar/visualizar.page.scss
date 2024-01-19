@@ -1,0 +1,58 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ion-content {
+  
+  animation: slideIn 2s ease ; 
+  
+  
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-button {
+  --background: #007bff; 
+  --color: white; 
+  margin: 10px 0; 
+  font-weight: bold;
+  border: 5px solid black;
+  text-transform: uppercase; 
+}
+
+.custom-button + .custom-button {
+  margin-top: 5px; 
+}
+
+.start-button {
+  --background: #3302f7fc; 
+  color: white; 
+  box-shadow: 0 0 500px #3302f7fc; 
+  margin-bottom: 20px;
+}
+
+.start-button ion-icon {
+  font-size: 30px; 
+}
+
+.rounded-container {
+  background-color: #3302f7fc;
+  border-radius: 15px; 
+  padding: 50px;
+  box-shadow: 0 0 600px #3302f7fc; 
+}
+
+.button-space {
+  margin-top: 10px; 
+}
